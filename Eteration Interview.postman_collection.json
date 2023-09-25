@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "7e4442e8-b761-46d3-a978-c8763d397c10",
+		"name": "Eteration Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6937223",
+		"_collection_link": "https://galactic-water-976072.postman.co/workspace/My-Workspace~107a242e-9419-486d-8dd1-b12f6c31a378/collection/6937223-7e4442e8-b761-46d3-a978-c8763d397c10?action=share&source=collection_link&creator=6937223"
+	},
+	"item": [
+		{
+			"name": "Deposit Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountName",
+							"value": "Jim",
+							"type": "text"
+						},
+						{
+							"key": "accountNumber",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/basicbanking/accountDeposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"basicbanking",
+						"accountDeposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WithDrawMoney Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountName",
+							"value": "Jim",
+							"type": "text"
+						},
+						{
+							"key": "accountNumber",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "80",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/basicbanking/accountWithdrawMoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"basicbanking",
+						"accountWithdrawMoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Account Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/basicbanking/getCurrentAccountData?accountNumber=12345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"basicbanking",
+						"getCurrentAccountData"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
